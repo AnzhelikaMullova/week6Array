@@ -43,12 +43,79 @@ const ArrayDirector = [
     },
   ];
 
-ArrayDirector.forEach((item)=>{
 
-const name = document.getElementsByClassName(".dir-list__name");
-const career = document.getElementsByClassName(".dir-list__career");
-const films = document.getElementsByClassName(".dir-list__films");
+  ArrayDirector.forEach((item)=>{
 
-name.textContent = item.name; 
+    const app = document.querySelector(".app");
+    const newElem = document.createElement("div");
+    const newElOne = document.createElement("div");
+    const newEl = document.createElement("a");
 
-});
+
+
+    newElem.textContent = item.name;
+    newElOne.textContent = item.career;
+    newEl.textContent = item.films;
+    newEl.setAttribute('href', item.films);
+    newEl.innerText = 'Фильмы';
+
+
+
+     app.appendChild(newElem);
+     app.appendChild(newElOne);
+     app.appendChild(newEl);
+    
+
+    });
+  
+
+    
+      const secondArr = ArrayDirector.map((el) => { 
+        
+        const film = document.querySelector(".film");
+        const newElFilm = document.createElement("div");
+        newElFilm.textContent= el.top_rated_film;
+
+         film.appendChild(newElFilm);
+     
+    }); 
+
+
+
+
+
+
+
+
+
+
+
+  // const secondArr = ArrayDirector.filter((el) => {
+    //     const app = document.querySelector(".app");
+    //     const newElFilm = document.createElement("div");
+    //     newElFilm.innerHTML= el.top_rated_film;
+
+    //     app.appendChild(newElFilm);
+    //   })
+      // взяли жлементы из самива существующего
+
+
+
+
+
+
+
+
+
+// ArrayDirector.forEach((item)=>{
+
+// const name = document.querySelector('.dir-list__name');
+// const career =document.querySelector(".dir-list__career");
+// const films = document.querySelector(".dir-list__films");
+
+
+// name.textContent=item.name;
+// career.textContent=item.career;
+// films.href=item.films;
+
+// });
