@@ -59,8 +59,6 @@ const ArrayDirector = [
     newEl.setAttribute('href', item.films);
     newEl.innerText = 'Фильмы';
 
-
-
      app.appendChild(newElem);
      app.appendChild(newElOne);
      app.appendChild(newEl);
